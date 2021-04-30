@@ -1,19 +1,22 @@
 pkgbase = luxcorerender-bin
 	pkgdesc = LuxCoreRender is a physically correct, unbiased rendering engine (official binary version).
-	pkgver = 2.2
+	pkgver = 2.5
 	pkgrel = 1
 	arch = x86_64
 	license = apache
-	makedepends = unzip
-	depends = libx11
-	depends = libxcb
-	depends = ocl-icd
-	provides = luxcorerender
+	makedepends = python
+	depends = embree
+	depends = openimagedenoise
+	depends = gtk3
+	optdepends = ocl-icd: for gpu acceleration
+	optdepends = cuda: for OptiX/CUDA acceleration
+	optdepends = python: for pyluxcoretools
+	provides = luxcorerender=2.5
 	conflicts = luxcorerender
-	source = https://github.com/LuxCoreRender/LuxCore/releases/download/luxcorerender_v2.2/luxcorerender-v2.2-blender2.80-linux64-opencl.tar.bz2
-	source = https://github.com/LuxCoreRender/LuxCore/releases/download/luxcorerender_v2.2/luxcorerender-v2.2-linux64-opencl-sdk.tar.bz2
-	sha256sums = 9e607d10a24d0d24ca051c4f9d5114ca1a42d7b3749de8d56ac9024ae5a97c52
-	sha256sums = 13fc4670b1fc87d2b36d6228b035ce220adeaff6f65177f2945f247d89f4e212
+	source = https://github.com/LuxCoreRender/LuxCore/releases/download/luxcorerender_v2.5/luxcorerender-v2.5-linux64.tar.bz2
+	source = https://github.com/LuxCoreRender/LuxCore/releases/download/luxcorerender_v2.5/luxcorerender-v2.5-linux64-sdk.tar.bz2
+	sha256sums = 7732a2eecb64cfe3e04699dd048b3b8fb2cefcc3a31aadf3c501789d470e68c1
+	sha256sums = ec9a262864899da0f8713654bfd67036d902dd0bc73ecdf738698d64cbf1dee9
 
 pkgname = luxcorerender-bin
 
